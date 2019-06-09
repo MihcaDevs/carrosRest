@@ -22,6 +22,10 @@ public class CarroService {
 		return rep.findById(id);
 	}
 	
+	public Iterable<Carro> getCarroByTipo(String tipo) {
+		return rep.findByTipo(tipo);
+	}
+	
 	public List<Carro> getCarrosFake() {
 		List<Carro> carros = new ArrayList<>();
 		
@@ -32,6 +36,8 @@ public class CarroService {
 		return carros;
 		
 	}
+
+	
 
 	
 
