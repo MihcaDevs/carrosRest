@@ -1,13 +1,25 @@
 package com.carros.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Carro {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	private String name;
+	private String nome;
 	
 	
+	public Carro(){
+		
+	}
 	public Carro(Long id, String name) {
 				this.id = id;
-				this.name = name;
+				this.nome = name;
 	}
 
 
@@ -22,12 +34,12 @@ public class Carro {
 
 
 	public String getName() {
-		return name;
+		return nome;
 	}
 
 
 	public void setName(String name) {
-		this.name = name;
+		this.nome = name;
 	}
 	
 	
