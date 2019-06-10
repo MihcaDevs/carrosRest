@@ -26,19 +26,9 @@ public class CarroService {
 		return rep.findByTipo(tipo);
 	}
 	
-	public List<Carro> getCarrosFake() {
-		List<Carro> carros = new ArrayList<>();
-		
-		carros.add(new Carro(1L, "Fusca"));
-		carros.add(new Carro(2L, "Brasil"));
-		carros.add(new Carro(3L, "Chevette"));
-		
-		return carros;
-		
+	public Carro save(Carro carro) {
+		return rep.save(carro);
 	}
-
 	
-
 	
-
 }

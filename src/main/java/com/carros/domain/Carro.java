@@ -9,7 +9,7 @@ import javax.persistence.Id;
 public class Carro {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String nome;
 	private String tipo;
@@ -18,9 +18,10 @@ public class Carro {
 	public Carro(){
 		
 	}
-	public Carro(Long id, String name) {
+	public Carro(Long id, String name, String tipo) {
 				this.id = id;
 				this.nome = name;
+				this.tipo = tipo;
 	}
 
 
